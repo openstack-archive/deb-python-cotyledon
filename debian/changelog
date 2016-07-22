@@ -1,3 +1,9 @@
+python-cotyledon (1.2.6-2) unstable; urgency=medium
+
+  * Added more copyright holders.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 22 Jul 2016 07:49:18 +0000
+
 python-cotyledon (1.2.6-1) unstable; urgency=medium
 
   * Initial release. (Closes: #832033)

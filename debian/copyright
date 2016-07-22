@@ -3,7 +3,10 @@ Upstream-Name: cotyledon
 Source: https://github.com/sileht/cotyledon
 
 Files: *
-Copyright: (c) 2013, Mehdi Abaakouk
+Copyright: (c) 2013-2016, Mehdi Abaakouk <sileht@sileht.net>
+           (c) 2013-2016, Julien Danjou <julien@danjou.info>
+           (c) 2013 Hewlett-Packard Development Company, L.P.
+           (c) 2010-2011, OpenStack Foundation
 License: Apache-2
 
 Files: debian/*
