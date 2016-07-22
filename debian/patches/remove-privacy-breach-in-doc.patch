@@ -1,0 +1,27 @@
+Description: Remove privacy breach in doc
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: no
+Last-Update: 2016-07-22
+
+--- python-cotyledon-1.2.6.orig/README.rst
++++ python-cotyledon-1.2.6/README.rst
+@@ -2,19 +2,6 @@
+ Cotyledon
+ ===============================
+ 
+-.. image:: https://travis-ci.org/sileht/cotyledon.png?branch=master
+-   :target: https://travis-ci.org/sileht/cotyledon
+-
+-.. image:: https://img.shields.io/pypi/v/cotyledon.svg
+-   :target: https://pypi.python.org/pypi/cotyledon/
+-   :alt: Latest Version
+-
+-.. image:: https://img.shields.io/pypi/dm/cotyledon.svg
+-   :target: https://pypi.python.org/pypi/cotyledon/
+-   :alt: Downloads
+-
+-
+-
+ Cotyledon provides a framework for defining long-running services.
+ 
+ * Free software: Apache license
