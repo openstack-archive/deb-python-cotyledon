@@ -1,0 +1,5 @@
+python-cotyledon (1.2.6-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #832033)
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 21 Jul 2016 16:55:43 +0200
