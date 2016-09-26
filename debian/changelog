@@ -1,3 +1,10 @@
+python-cotyledon (1.2.6-3) UNRELEASED; urgency=medium
+
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Using OpenStack's Gerrit as VCS URLs.
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 26 Sep 2016 19:08:30 +0200
+
 python-cotyledon (1.2.6-2) unstable; urgency=medium
 
   * Added more copyright holders.
