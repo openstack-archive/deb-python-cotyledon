@@ -209,9 +209,6 @@ class TestCotyledon(Base):
 class TestBuggyCotyledon(Base):
     name = "buggy_app"
 
-    @unittest.skipIf(sys.version_info[0] != 3,
-                     "Buggy on py27, time.sleep returns before alarm callback "
-                     "is called")
     def test_graceful_timeout_term(self):
         lines = self.get_lines(1)
         childpid = self.get_pid(lines[0])
@@ -231,9 +228,6 @@ class TestBuggyCotyledon(Base):
             b'DEBUG:cotyledon:Shutdown finish'
         ], lines[-3:])
 
-    @unittest.skipIf(sys.version_info[0] != 3,
-                     "Buggy on py27, time.sleep returns before alarm callback "
-                     "is called")
     def test_graceful_timeout_kill(self):
         lines = self.get_lines(1)
         childpid = self.get_pid(lines[0])

@@ -147,7 +147,13 @@ class Service(object):
     def _terminate(self):
         signal.signal(signal.SIGTERM, signal.SIG_IGN)
         if self.graceful_shutdown_timeout > 0:
-            signal.alarm(self.graceful_shutdown_timeout)
+            # NOTE(sileht): signal.alarm doesn't work well on python2
+            # use a threading timer instead
+            if sys.version_info[0] == 3:
+                signal.alarm(self.graceful_shutdown_timeout)
+            else:
+                threading.Timer(self.graceful_shutdown_timeout,
+                                self._graceful_shutdown_timeout_cb).start()
         with _exit_on_exception():
             self.terminate()
             sys.exit(0)
@@ -157,7 +163,7 @@ class Service(object):
                  'graceful exiting of service %s' % self._title)
         self._terminate()
 
-    def _graceful_shutdown_timeout_cb(self, signum, frame):
+    def _graceful_shutdown_timeout_cb(self, *args, **kwargs):
         LOG.info('Graceful shutdown timeout (%d) exceeded, exiting %s now.' %
                  (self.graceful_shutdown_timeout, self._title))
         os._exit(1)
