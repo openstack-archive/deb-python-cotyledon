@@ -1,3 +1,9 @@
+python-cotyledon (1.2.6-4) UNRELEASED; urgency=medium
+
+  * Bumped debhelper compat version to 10
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 24 Nov 2016 00:04:45 +0100
+
 python-cotyledon (1.2.6-3) unstable; urgency=medium
 
   [ Ondřej Nový ]
